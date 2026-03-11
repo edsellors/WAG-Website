@@ -220,78 +220,27 @@
       line-height: 1.35;
     }
 
-  .hero-visual {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 32px;
-  min-height: 540px;
-  background:
-    radial-gradient(circle at top right, rgba(255,255,255,0.8), transparent 30%),
-    radial-gradient(circle at bottom left, rgba(255,255,255,0.45), transparent 35%),
-    linear-gradient(135deg, #dfeaf6 0%, #edf4fb 45%, #d8e6f3 100%);
-  position: relative;
-  overflow: hidden;
-}
+    .hero-visual {
+      display: flex;
+      align-items: stretch;
+      justify-content: stretch;
+      min-height: 540px;
+      background: linear-gradient(135deg, #dfeaf6 0%, #edf4fb 45%, #d8e6f3 100%);
+      overflow: hidden;
+    }
 
-.hero-visual::before,
-.hero-visual::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.35);
-}
+    .hero-photo img,
+    .about-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
 
-.hero-visual::before {
-  width: 240px;
-  height: 240px;
-  top: 40px;
-  right: 40px;
-}
+    .hero-photo img {
+      filter: saturate(0.96) contrast(1.02);
+    }
 
-.hero-visual::after {
-  width: 180px;
-  height: 180px;
-  bottom: 35px;
-  left: 35px;
-}
-
-.hero-badge-card {
-  position: relative;
-  z-index: 1;
-  max-width: 420px;
-  background: rgba(255,255,255,0.82);
-  backdrop-filter: blur(6px);
-  border: 1px solid rgba(255,255,255,0.7);
-  border-radius: 24px;
-  padding: 30px;
-  box-shadow: 0 14px 40px rgba(16, 32, 54, 0.10);
-}
-
-.hero-badge-card h3 {
-  margin: 0 0 12px;
-  font-size: 1.7rem;
-  line-height: 1.15;
-  color: var(--primary);
-  letter-spacing: -0.03em;
-}
-
-.hero-badge-card p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 1rem;
-}
-
-.mini-label {
-  display: inline-block;
-  margin-bottom: 14px;
-  padding: 8px 12px;
-  border-radius: 999px;
-  background: #eaf1f8;
-  color: var(--primary);
-  font-size: 0.82rem;
-  font-weight: 700;
-}
     section {
       padding: 76px 0;
     }
@@ -353,15 +302,11 @@
     .about-art {
       background: linear-gradient(180deg, #f7fbff 0%, #eef4fa 100%);
       display: flex;
-      align-items: center;
-      justify-content: center;
+      align-items: stretch;
+      justify-content: stretch;
       min-height: 360px;
       overflow: hidden;
-    }
-
-    .about-art svg {
-      width: 100%;
-      height: 100%;
+      padding: 0;
     }
 
     .consultants-grid {
@@ -507,6 +452,10 @@
         padding: 22px;
       }
 
+      .about-art {
+        padding: 0;
+      }
+
       .hero-visual {
         min-height: 320px;
       }
@@ -564,72 +513,8 @@
             </div>
           </div>
 
-          <div class="hero-visual">
-            <svg viewBox="0 0 800 700" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <defs>
-                <linearGradient id="scrub" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stop-color="#4e83b6"/>
-                  <stop offset="100%" stop-color="#2f6695"/>
-                </linearGradient>
-                <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="#fafdff" stop-opacity="0.95"/>
-                  <stop offset="100%" stop-color="#dce9f4" stop-opacity="0.95"/>
-                </linearGradient>
-                <linearGradient id="machine" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stop-color="#ffffff"/>
-                  <stop offset="100%" stop-color="#dde8f1"/>
-                </linearGradient>
-              </defs>
-
-              <rect x="0" y="0" width="800" height="700" fill="transparent"/>
-
-              <circle cx="670" cy="120" r="120" fill="#ffffff" opacity="0.35"/>
-              <circle cx="730" cy="210" r="80" fill="#ffffff" opacity="0.24"/>
-              <circle cx="120" cy="620" r="160" fill="#ffffff" opacity="0.18"/>
-
-              <rect x="350" y="150" rx="24" ry="24" width="180" height="300" fill="url(#machine)" stroke="#d5e2ed"/>
-              <rect x="375" y="175" rx="14" ry="14" width="130" height="85" fill="#f5faff" stroke="#d5e2ed"/>
-              <rect x="386" y="188" rx="8" ry="8" width="108" height="58" fill="#dceaf6"/>
-              <rect x="402" y="275" rx="8" ry="8" width="72" height="24" fill="#eef5fb"/>
-              <rect x="402" y="310" rx="8" ry="8" width="95" height="24" fill="#eef5fb"/>
-              <rect x="350" y="448" rx="0" ry="0" width="180" height="16" fill="#c9d7e3"/>
-              <rect x="398" y="464" rx="0" ry="0" width="20" height="130" fill="#b8c8d6"/>
-              <rect x="463" y="464" rx="0" ry="0" width="20" height="130" fill="#b8c8d6"/>
-
-              <rect x="540" y="250" rx="20" ry="20" width="110" height="170" fill="url(#machine)" stroke="#d5e2ed"/>
-              <circle cx="595" cy="288" r="18" fill="#a9c8e3"/>
-              <rect x="565" y="330" rx="8" ry="8" width="58" height="18" fill="#e5eff7"/>
-              <rect x="565" y="360" rx="8" ry="8" width="46" height="18" fill="#e5eff7"/>
-              <line x1="650" y1="390" x2="720" y2="520" stroke="#6ba7d6" stroke-width="10" stroke-linecap="round"/>
-
-              <ellipse cx="170" cy="655" rx="230" ry="38" fill="#d4e2ee" opacity="0.6"/>
-              <ellipse cx="505" cy="620" rx="190" ry="28" fill="#d4e2ee" opacity="0.55"/>
-
-              <circle cx="180" cy="130" r="70" fill="#f7fbff"/>
-              <path d="M120 140 Q180 80 240 140" fill="#9dc3e5"/>
-              <path d="M128 141 Q180 95 232 141" fill="#cfe3f4"/>
-              <circle cx="180" cy="152" r="50" fill="#f1c8ad"/>
-              <rect x="146" y="142" width="68" height="28" rx="14" fill="#d9eefc"/>
-              <path d="M155 220 Q180 208 205 220 L220 390 Q180 410 140 390 Z" fill="url(#scrub)"/>
-              <rect x="138" y="230" width="84" height="110" rx="20" fill="url(#scrub)"/>
-              <rect x="152" y="336" width="20" height="120" rx="10" fill="#f1c8ad"/>
-              <rect x="189" y="336" width="20" height="120" rx="10" fill="#f1c8ad"/>
-              <rect x="142" y="226" width="76" height="18" rx="9" fill="#86b1d8" opacity="0.8"/>
-              <rect x="212" y="240" width="100" height="18" rx="9" transform="rotate(18 212 240)" fill="#f1c8ad"/>
-              <rect x="232" y="270" width="110" height="18" rx="9" transform="rotate(14 232 270)" fill="#f1c8ad"/>
-              <circle cx="336" cy="286" r="10" fill="#f1c8ad"/>
-              <circle cx="316" cy="282" r="8" fill="#f1c8ad"/>
-              <path d="M238 295 C300 290, 330 270, 370 235" stroke="#f1c8ad" stroke-width="16" stroke-linecap="round" fill="none"/>
-              <circle cx="374" cy="232" r="10" fill="#f1c8ad"/>
-
-              <circle cx="108" cy="112" r="12" fill="#d7ebfb"/>
-              <circle cx="150" cy="86" r="8" fill="#d7ebfb"/>
-              <circle cx="244" cy="88" r="10" fill="#d7ebfb"/>
-
-              <rect x="40" y="500" rx="20" ry="20" width="220" height="110" fill="#ffffff" opacity="0.45" stroke="#d7e3ef"/>
-              <line x1="72" y1="535" x2="230" y2="535" stroke="#b7cbdd" stroke-width="8" stroke-linecap="round"/>
-              <line x1="72" y1="565" x2="210" y2="565" stroke="#c7d8e6" stroke-width="8" stroke-linecap="round"/>
-            </svg>
+          <div class="hero-visual hero-photo">
+            <img src="images/hero-anaesthesia.jpg" alt="Consultant anaesthetist preparing equipment in theatre" />
           </div>
         </div>
       </div>
@@ -643,7 +528,7 @@
         </div>
 
         <div class="about-grid">
-                    <div class="panel about-panel">
+          <div class="panel about-panel">
             <p>
               Worcestershire Anaesthetic Group LLP is a distinguished Limited Liability Partnership
               of 17 consultant anaesthetists, dedicated to providing top-tier anaesthetic services
@@ -665,56 +550,8 @@
             </p>
           </div>
 
-          <div class="panel about-art">
-            <svg viewBox="0 0 700 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <defs>
-                <linearGradient id="bgFade" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stop-color="#f7fbff"/>
-                  <stop offset="100%" stop-color="#e6f0f8"/>
-                </linearGradient>
-                <linearGradient id="blueScrub" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stop-color="#4f82b4"/>
-                  <stop offset="100%" stop-color="#2d628f"/>
-                </linearGradient>
-              </defs>
-
-              <rect width="700" height="500" fill="url(#bgFade)"/>
-              <circle cx="120" cy="120" r="90" fill="#ffffff" opacity="0.6"/>
-              <circle cx="560" cy="90" r="120" fill="#ffffff" opacity="0.45"/>
-              <circle cx="640" cy="420" r="120" fill="#ffffff" opacity="0.25"/>
-
-              <rect x="70" y="320" width="560" height="22" rx="11" fill="#d7e4ef"/>
-              <rect x="90" y="190" width="130" height="130" rx="18" fill="#ffffff" stroke="#dbe8f2"/>
-              <rect x="110" y="210" width="90" height="18" rx="9" fill="#d7e8f5"/>
-              <rect x="110" y="240" width="70" height="18" rx="9" fill="#e6f1f8"/>
-              <rect x="110" y="270" width="80" height="18" rx="9" fill="#e6f1f8"/>
-
-              <circle cx="420" cy="145" r="55" fill="#f2c7aa"/>
-              <path d="M360 140 Q420 80 480 140" fill="#a7c8e3"/>
-              <path d="M370 140 Q420 98 470 140" fill="#d5e6f5"/>
-              <rect x="380" y="135" width="80" height="28" rx="14" fill="#e7f3fc"/>
-
-              <rect x="360" y="195" width="120" height="140" rx="26" fill="url(#blueScrub)"/>
-              <path d="M390 190 Q420 210 450 190" stroke="#86b1d8" stroke-width="8" fill="none"/>
-              <rect x="386" y="330" width="24" height="90" rx="12" fill="#f2c7aa"/>
-              <rect x="430" y="330" width="24" height="90" rx="12" fill="#f2c7aa"/>
-
-              <path d="M360 250 C300 240, 260 250, 225 275" stroke="#f2c7aa" stroke-width="18" stroke-linecap="round" fill="none"/>
-              <circle cx="220" cy="278" r="10" fill="#f2c7aa"/>
-
-              <rect x="210" y="235" width="115" height="88" rx="16" fill="#ffffff" stroke="#dbe8f2"/>
-              <rect x="225" y="248" width="84" height="50" rx="8" fill="#d9ebf7"/>
-              <rect x="235" y="258" width="64" height="8" rx="4" fill="#a6c8e3"/>
-              <rect x="235" y="274" width="48" height="8" rx="4" fill="#a6c8e3"/>
-
-              <rect x="510" y="220" width="90" height="120" rx="16" fill="#ffffff" stroke="#dbe8f2"/>
-              <circle cx="555" cy="255" r="14" fill="#a8c8e2"/>
-              <rect x="535" y="285" width="40" height="12" rx="6" fill="#e6f1f8"/>
-              <rect x="535" y="306" width="30" height="12" rx="6" fill="#e6f1f8"/>
-
-              <line x1="480" y1="260" x2="510" y2="260" stroke="#b9cfdf" stroke-width="8" stroke-linecap="round"/>
-              <line x1="600" y1="320" x2="645" y2="385" stroke="#6ba7d6" stroke-width="10" stroke-linecap="round"/>
-            </svg>
+          <div class="panel about-art about-photo">
+            <img src="images/about-theatre.jpg" alt="Modern operating theatre and anaesthetic equipment" />
           </div>
         </div>
       </div>
